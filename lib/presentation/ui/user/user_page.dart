@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_poc/domain/entities/user_entity.dart';
 import 'package:flutter_web_poc/presentation/widgets/atoms/colors/colors.dart';
-import 'package:flutter_web_poc/presentation/widgets/molecules/user_card/user_card.dart';
+import 'package:flutter_web_poc/presentation/widgets/atoms/text/app_text.dart';
+import 'package:flutter_web_poc/presentation/widgets/molecules/card/app_card.dart';
 import 'package:flutter_web_poc/presentation/widgets/templates/layout/layout.dart';
 
 class UserPage extends StatefulWidget {
@@ -24,7 +25,33 @@ class _UserPageState extends State<UserPage> {
       centerTitle: false,
       child: Padding(
         padding: const EdgeInsets.all(8),
-        child: UserCard(userEntity: widget.userEntity),
+        child: AppCard(
+          content: SizedBox(
+            width: double.infinity,
+            height: 100,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                AppText(
+                  '#${widget.userEntity.id}',
+                  fontFamily: 'Itau Display',
+                  fontSize: 20,
+                ),
+                AppText(
+                  'Name: ${widget.userEntity.name}',
+                  fontFamily: 'Itau Text',
+                  fontSize: 18,
+                ),
+                AppText(
+                  'Phone: ${widget.userEntity.phone}',
+                  fontFamily: 'Itau Text',
+                  fontSize: 18,
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
