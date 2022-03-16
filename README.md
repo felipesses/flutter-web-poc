@@ -30,4 +30,9 @@ Encontrei também algumas discussões no GitHub sobre o uso do SEO no Flutter We
 Não tenho ainda muita experiência com Design Systems, porém dando uma breve olhada no Voxel me pareceu muito se aproximar
 do conceito de Atomic Design, uma das várias metodologias de Design System. Fiz um exemplo básico no Flutter após estudo do Atomic Design, podem ficar livres para me corrigirem. Assim ficou organizado nas telas:
 
-![presentation](https://github.com/felipesses/flutter_web_poc/blob/main/presentation.jpeg?raw=true)
+![presentation](https://github.com/felipesses/flutter-web-poc/blob/main/images/presentation.jpeg?raw=true)
+
+- atoms = widgets isolados
+- molecules = um grupo de widgets
+- organisms = um grupo de moléculas
+- templates = uma página envolvendo todos os conceitos acima
